@@ -3,18 +3,18 @@ import React, { createContext, useState } from "react";
 export const ThemeContext = createContext();
 
 function ThemeProvider({ children }) {
-  const [Theme, setTheme] = useState("lightTheme");
+  const [Theme, setTheme] = useState("light");
 
   let changeTheme = () => {
-    let themes = {
-      lightTheme: "#FFFFFF",
-      darkTheme: "#242424",
-    };
-
-    Theme == "lightTheme" ? setTheme("darkTheme") : setTheme("lightTheme");
-
-    document.body.backgroundColor = themes.Theme;
+    if (Theme === "light") {
+      setTheme("dark");
+    } else if (Theme === "dark") {
+      setTheme("light");
+    }
+    document.body.className = "";
+    document.body.classList.add(Theme);
   };
+
   return (
     <ThemeContext.Provider value={{ Theme, changeTheme }}>
       {children}

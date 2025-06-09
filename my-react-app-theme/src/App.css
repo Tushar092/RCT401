@@ -40,3 +40,40 @@
 .read-the-docs {
   color: #888;
 }
+
+.app {
+  padding: 20px;
+  text-align: center;
+  transition: background 0.3s, color 0.3s;
+}
+
+.app.light {
+  background: white;
+  color: black;
+}
+
+.app.dark {
+  background: #1e1e1e;
+  color: white;
+}
+
+button {
+  padding: 10px 20px;
+  margin-top: 20px;
+}
+
+body {
+  transition: background 0.3s, color 0.3s;
+}
+
+/* Light Theme */
+body.light {
+  background-color: #ffffff;
+  color: #000000;
+}
+
+/* Dark Theme */
+body.dark {
+  background-color: #121212;
+  color: #ffffff;
+}

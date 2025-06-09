@@ -5,13 +5,11 @@ import './App.css'
 import { ThemeContext } from './Context/ThemeProvider';
 
 function App() {
-  const [count, setCount] = useState(0)
   const {Theme, changeTheme} = useContext(ThemeContext);
   return (
-    <>
+    <div className={`app ${Theme}`}>
       <button onClick={changeTheme}>Toggle Me!</button>
-    </>
+    </div>
   )
 }
-
 export default App
